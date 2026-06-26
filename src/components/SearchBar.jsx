@@ -9,7 +9,6 @@ function SearchBar({ onSearch }) {
     if (!city.trim()) return;
 
     onSearch(city);
-
     setCity("");
   };
 
@@ -17,12 +16,12 @@ function SearchBar({ onSearch }) {
     <form className="search" onSubmit={handleSubmit}>
       <input
         type="text"
-        placeholder="Search City..."
+        placeholder="Search city..."
         value={city}
         onChange={(e) => setCity(e.target.value)}
       />
 
-      <button>Search</button>
+      <button type="submit">Search</button>
     </form>
   );
 }
